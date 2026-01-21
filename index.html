@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MENÜ</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+   body {
+      margin: 0;
+      background-color: #f7f1e1;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+        transition: opacity 0.8s ease;
+    }
+
+    .wrapper {
+      width: 1200px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    header {
+      grid-column: 1 / -1;
+      height: 300px;
+      background: linear-gradient(135deg, black, red);
+      border-radius: 20px;
+      color: gold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #suma {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 40px;
+      color: darkred;
+      font-weight: bold;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      grid-column: 1 / -1;
+      color: darkred;
+      margin: 0;
+      padding: 0 10px;
+      font-size: 30px;
+    }
+
+    .produkt {
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      font-size: 28px;
+      color: #333;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      margin: 10px 0;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .produkt:hover {
+      transform: scale(1.02);
+      transition: transform 0.2s ease;
+      background-color: lime;
+    }
+
+    .lista {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body >
+    <script>
+        window.onload = () =>{
+            document.body.style.opacity = '1'
+        }
+    </script>
+
+  <div class="wrapper">
+    <header>MENÜ</header>
+
+    <div id="suma">SUMME: 0,00€</div>
+
+    <h2>🥐 Frühstück</h2>
+    <div class="lista">
+      <div class="produkt" data-name="Brotchen mit Butter" data-price="2.50">🥖 Brotchen mit Butter - 2,50€</div>
+      <div class="produkt" data-name="Croissant" data-price="2.80">🥐 Croissant - 2,80€</div>
+      <div class="produkt" data-name="Müsli mit Joghurt" data-price="3.50">🥣 Müsli mit Joghurt - 3,50€</div>
+      <div class="produkt" data-name="Rührei" data-price="4.00">🍳 Rührei - 4,00€</div>
+      <div class="produkt" data-name="Kaffe" data-price="2.00">☕ Kaffe - 2,00€</div>
+    </div>
+
+    <h2>🍽️ Hauptgerichte</h2>
+    <div class="lista">
+      <div class="produkt" data-name="Schnitzel mit Pommes" data-price="9.50">🍗 Schnitzel mit Pommes - 9,50€</div>
+      <div class="produkt" data-name="Spaghetti Bolognese" data-price="8.50">🍝 Spaghetti Bolognese - 8,50€</div>
+      <div class="produkt" data-name="Hähnchen mit Reis" data-price="9.00">🍗 Hähnchen mit Reis - 9,00€</div>
+      <div class="produkt" data-name="Salat mit Hähnchen" data-price="7.50">🥗 Salat mit Hähnchen - 7,50€</div>
+      <div class="produkt" data-name="Pizza Margherita" data-price="8.00">🍕 Pizza Margherita - 8,00€</div>
+    </div>
+
+    <h2>🍰 Desserts</h2>
+    <div class="lista">
+      <div class="produkt" data-name="Apfelstrudel" data-price="3.50">🍎 Apfelstrudel - 3,50€</div>
+      <div class="produkt" data-name="Kuchen" data-price="3.00">🍰 Kuchen - 3,00€</div>
+      <div class="produkt" data-name="Eis (Vanille / Schokolade)" data-price="2.80">🍨 Eis (Vanille / Schokolade) - 2,80€</div>
+      <div class="produkt" data-name="Pudding" data-price="2.50">🍮 Pudding - 2,50€</div>
+      <div class="produkt" data-name="Obstsalat" data-price="3.20">🍓 Obstsalat - 3,20€</div>
+    </div>
+
+    <h2>🍹 Getränke</h2>
+    <div class="lista">
+      <div class="produkt" data-name="Wasser" data-price="1.80">💧 Wasser - 1,80€</div>
+      <div class="produkt" data-name="Saft" data-price="2.50">🧃 Saft - 2,50€</div>
+      <div class="produkt" data-name="Cola" data-price="2.50">🥤 Cola - 2,50€</div>
+      <div class="produkt" data-name="Kaffe" data-price="2.00">☕ Kaffe - 2,00€</div>
+      <div class="produkt" data-name="Tee" data-price="2.00">🍵 Tee - 2,00€</div>
+    </div>
+
+  </div>
+
+  <script>
+    let wynik = document.getElementById('suma')
+    const lista = document.querySelectorAll('.produkt')
+    let suma = 0
+    lista.forEach(li => {
+        li.addEventListener('click',()=>{
+            suma += parseFloat(li.dataset.price)
+            wynik.textContent = 'SUMME:' + " " + suma.toFixed(2) +'€'
+        })
+    })
+  </script>
+</body>
+</html>
