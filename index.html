@@ -81,6 +81,23 @@
       flex-direction: column;
       gap: 10px;
     }
+    #clear{
+      display: flex;
+      background-color: white;
+      width: 25px;
+      margin-left: 350px;
+      border: none;
+      scale: 4;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+      margin-top: 20px;
+    }
+    #clear:hover{
+      transform: scale(1.5);
+    }
   </style>
 </head>
 <body >
@@ -94,7 +111,7 @@
     <header>MENÜ</header>
 
     <div id="suma">SUMME: 0,00€</div>
-
+    <button id="clear">❌</button>
     <h2>🥐 Frühstück</h2>
     <div class="lista">
       <div class="produkt" data-name="Brotchen mit Butter" data-price="2.50">🥖 Brotchen mit Butter - 2,50€</div>
@@ -142,6 +159,10 @@
             suma += parseFloat(li.dataset.price)
             wynik.textContent = 'SUMME:' + " " + suma.toFixed(2) +'€'
         })
+    })
+    document.getElementById('clear').addEventListener('click',()=>{
+      suma = 0
+      wynik.textContent = 'SUMME:' + " " + suma.toFixed(2) +'€'
     })
   </script>
 </body>
