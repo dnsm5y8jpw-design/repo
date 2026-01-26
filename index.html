@@ -26,7 +26,7 @@ body{
 
 header{
   grid-column:1/-1;
-  height:220px;
+  height:240px;
   background:linear-gradient(135deg,black,red);
   border-radius:20px;
   color:gold;
@@ -57,7 +57,6 @@ h2{
   gap:15px;
 }
 
-/* PRODUKT */
 .produkt{
   position:relative;
   background:white;
@@ -69,13 +68,11 @@ h2{
   box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
 
-/* DE */
 .main{
   position:relative;
   z-index:2;
 }
 
-/* PL – TŁUMACZENIE */
 .translate{
   position:absolute;
   left:0;
@@ -88,16 +85,13 @@ h2{
   align-items:center;
   justify-content:center;
   font-size:22px;
-  letter-spacing:1px;
-  transition:.35s ease;
+  transition:.3s;
 }
 
-/* HOVER → WYSUWA TŁUMACZENIE */
 .produkt:hover .translate{
   bottom:0;
 }
 
-/* CLEAR */
 #clear{
   grid-column:1/-1;
   margin:auto;
@@ -118,64 +112,44 @@ h2{
 <div id="suma">SUMME: 0.00€</div>
 <button id="clear">❌</button>
 
+<!-- FRÜHSTÜCK -->
 <h2>🥐 Frühstück</h2>
 <div class="lista">
-
-<div class="produkt" data-price="2.50">
-  <div class="main">🥖 Brötchen mit Butter – 2,50€</div>
-  <div class="translate">Bułka z masłem</div>
+<div class="produkt" data-price="2.50"><div class="main">🥖 Brötchen mit Butter – 2,50€</div><div class="translate">Bułka z masłem</div></div>
+<div class="produkt" data-price="2.80"><div class="main">🥐 Croissant – 2,80€</div><div class="translate">Rogalik</div></div>
+<div class="produkt" data-price="3.50"><div class="main">🥣 Müsli mit Joghurt – 3,50€</div><div class="translate">Musli z jogurtem</div></div>
+<div class="produkt" data-price="4.00"><div class="main">🍳 Rührei – 4,00€</div><div class="translate">Jajecznica</div></div>
+<div class="produkt" data-price="2.00"><div class="main">☕ Kaffee – 2,00€</div><div class="translate">Kawa</div></div>
 </div>
 
-<div class="produkt" data-price="2.80">
-  <div class="main">🥐 Croissant – 2,80€</div>
-  <div class="translate">Rogalik</div>
-</div>
-
-<div class="produkt" data-price="3.50">
-  <div class="main">🥣 Müsli mit Joghurt – 3,50€</div>
-  <div class="translate">Musli z jogurtem</div>
-</div>
-
-<div class="produkt" data-price="4.00">
-  <div class="main">🍳 Rührei – 4,00€</div>
-  <div class="translate">Jajecznica</div>
-</div>
-
-<div class="produkt" data-price="2.00">
-  <div class="main">☕ Kaffee – 2,00€</div>
-  <div class="translate">Kawa</div>
-</div>
-
-</div>
-
+<!-- HAUPTGERICHTE -->
 <h2>🍽️ Hauptgerichte</h2>
 <div class="lista">
-
-<div class="produkt" data-price="9.50">
-  <div class="main">🍗 Schnitzel mit Pommes – 9,50€</div>
-  <div class="translate">Kotlet z frytkami</div>
+<div class="produkt" data-price="9.50"><div class="main">🍗 Schnitzel mit Pommes – 9,50€</div><div class="translate">Kotlet z frytkami</div></div>
+<div class="produkt" data-price="8.50"><div class="main">🍝 Spaghetti Bolognese – 8,50€</div><div class="translate">Spaghetti bolognese</div></div>
+<div class="produkt" data-price="9.00"><div class="main">🍗 Hähnchen mit Reis – 9,00€</div><div class="translate">Kurczak z ryżem</div></div>
+<div class="produkt" data-price="7.50"><div class="main">🥗 Salat mit Hähnchen – 7,50€</div><div class="translate">Sałatka z kurczakiem</div></div>
+<div class="produkt" data-price="8.00"><div class="main">🍕 Pizza Margherita – 8,00€</div><div class="translate">Pizza Margherita</div></div>
 </div>
 
-<div class="produkt" data-price="8.50">
-  <div class="main">🍝 Spaghetti Bolognese – 8,50€</div>
-  <div class="translate">Spaghetti bolognese</div>
+<!-- DESSERTS -->
+<h2>🍰 Desserts</h2>
+<div class="lista">
+<div class="produkt" data-price="3.50"><div class="main">🍎 Apfelstrudel – 3,50€</div><div class="translate">Strudel jabłkowy</div></div>
+<div class="produkt" data-price="3.00"><div class="main">🍰 Kuchen – 3,00€</div><div class="translate">Ciasto</div></div>
+<div class="produkt" data-price="2.80"><div class="main">🍨 Eis – 2,80€</div><div class="translate">Lody</div></div>
+<div class="produkt" data-price="2.50"><div class="main">🍮 Pudding – 2,50€</div><div class="translate">Budyń</div></div>
+<div class="produkt" data-price="3.20"><div class="main">🍓 Obstsalat – 3,20€</div><div class="translate">Sałatka owocowa</div></div>
 </div>
 
-<div class="produkt" data-price="9.00">
-  <div class="main">🍗 Hähnchen mit Reis – 9,00€</div>
-  <div class="translate">Kurczak z ryżem</div>
-</div>
-
-<div class="produkt" data-price="7.50">
-  <div class="main">🥗 Salat mit Hähnchen – 7,50€</div>
-  <div class="translate">Sałatka z kurczakiem</div>
-</div>
-
-<div class="produkt" data-price="8.00">
-  <div class="main">🍕 Pizza Margherita – 8,00€</div>
-  <div class="translate">Pizza Margherita</div>
-</div>
-
+<!-- GETRÄNKE -->
+<h2>🍹 Getränke</h2>
+<div class="lista">
+<div class="produkt" data-price="1.80"><div class="main">💧 Wasser – 1,80€</div><div class="translate">Woda</div></div>
+<div class="produkt" data-price="2.50"><div class="main">🧃 Saft – 2,50€</div><div class="translate">Sok</div></div>
+<div class="produkt" data-price="2.50"><div class="main">🥤 Cola – 2,50€</div><div class="translate">Cola</div></div>
+<div class="produkt" data-price="2.00"><div class="main">☕ Kaffee – 2,00€</div><div class="translate">Kawa</div></div>
+<div class="produkt" data-price="2.00"><div class="main">🍵 Tee – 2,00€</div><div class="translate">Herbata</div></div>
 </div>
 
 </div>
